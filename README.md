@@ -1,6 +1,7 @@
 # DART-Elasticsearch
 
-DART Elasticsearch image build and service implementations.
+DART Elasticsearch image build and service implementations.  
+[![build and publish](https://github.com/twosixlabs-dart/dart-es/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/twosixlabs-dart/dart-es/actions/workflows/build-and-publish.yml)
 
 ## Image
 
