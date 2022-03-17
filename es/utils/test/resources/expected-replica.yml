@@ -1,0 +1,7 @@
+network.host: 0.0.0.0
+path.data: /opt/app/data
+cluster.name: dart-es
+cluster.initial_master_nodes: ["dart-es-master"]
+node.name: dart-es-replica-1
+discovery.zen.ping.unicast.hosts: localhost
+http.port: 9201

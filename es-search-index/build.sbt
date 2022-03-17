@@ -1,0 +1,1 @@
+name := "es-search-index"

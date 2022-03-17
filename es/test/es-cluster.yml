@@ -1,0 +1,60 @@
+version: '3.7'
+
+x-defaults: &defaults
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options:
+      max-size: '1m'
+      max-file: '5'
+
+services:
+  dart-es-master:
+    image: docker.causeex.com/dart/dart-es:michael
+    container_name: dart-es-master
+    hostname: dart-es-master
+    environment:
+      ES_TIMEOUT: 120
+      ES_NODE_ID: 0
+      ES_ROLE: master
+      ES_MASTER_NAME: dart-es-master
+      ES_CLUSTER: dart-es
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  dart-es-replica-1:
+    image: docker.causeex.com/dart/dart-es:michael
+    container_name: dart-es-replica-1
+    hostname: dart-es-replica-1
+    environment:
+      ES_TIMEOUT: 120
+      ES_ROLE: replica
+      ES_NODE_NAME: dart-es-replica-1
+      ES_NODE_ID: 1
+      ES_CLUSTER: dart-es
+      ES_MASTER_NAME: dart-es-master
+      ES_DISCOVERY_HOST: dart-es-master
+    ports:
+      - 9201:9201
+      - 9301:9301
+    depends_on:
+      - dart-es-master
+
+  dart-es-replica-2:
+    image: docker.causeex.com/dart/dart-es:michael
+    container_name: dart-es-replica-2
+    hostname: dart-es-replica-2
+    environment:
+      ES_TIMEOUT: 120
+      ES_ROLE: replica
+      ES_NODE_NAME: dart-es-replica-2
+      ES_NODE_ID: 2
+      ES_CLUSTER: dart-es
+      ES_MASTER_NAME: dart-es-master
+      ES_DISCOVERY_HOST: dart-es-master
+    ports:
+      - 9202:9202
+      - 9302:9302
+    depends_on:
+      - dart-es-master

@@ -1,0 +1,6 @@
+cluster.initial_master_nodes: ["dart-es-master"]
+cluster.name: dart-es
+network.host: 0.0.0.0
+node.name: dart-es-master
+path.data: /opt/app/data
+http.port: 9200
