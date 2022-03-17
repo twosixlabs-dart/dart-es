@@ -9,7 +9,7 @@ object Dependencies {
 
     val cdr4sVersion = "3.0.9"
     val dartCommonsVersion = "3.0.30"
-    val dartAuthVersion = "3.1.7"
+    val dartAuthVersion = "3.1.11"
 
     val scalaTestVersion = "3.1.4"
     val scalaMockVersion = "4.2.0"

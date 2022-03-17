@@ -36,7 +36,7 @@ lazy val commonSettings : Seq[ Def.Setting[ _ ] ] = {
             betterFiles,
         ).flatten,
         // `sbt test` should skip tests tagged IntegrationTest
-        Test / testOptions := Seq( Tests.Argument( "-l", "com.twosixlabs.dart.test.tags.annotations.IntegrationTest" ) ),
+        Test / testOptions := Seq( Tests.Argument( "-l", "annotations.IntegrationTest" ) ),
         // `sbt integration:test` should run only tests tagged IntegrationTest
         IntegrationConfig / parallelExecution := false,
         concurrentRestrictions in Global += Tags.limitSum( 1, Tags.Test, Tags.Untagged ),

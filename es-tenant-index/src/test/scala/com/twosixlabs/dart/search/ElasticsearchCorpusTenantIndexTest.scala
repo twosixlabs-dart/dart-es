@@ -1,9 +1,9 @@
 package com.twosixlabs.dart.search
 
+import annotations.{IntegrationTest, WipTest}
 import com.twosixlabs.dart.auth.tenant.CorpusTenantIndex.DocIdMissingFromIndexException
 import com.twosixlabs.dart.auth.tenant.CorpusTenantIndexTest
 import com.twosixlabs.dart.search.test.EsTestBase
-import com.twosixlabs.dart.test.tags.annotations.{IntegrationTest, WipTest}
 import org.scalatest.BeforeAndAfterEach
 
 import scala.concurrent.duration.DurationInt

@@ -1,12 +1,11 @@
 package com.twosixlabs.dart.search.test
 
 import better.files.Resource
-import com.sksamuel.elastic4s.{ElasticClient, ElasticProperties}
 import com.sksamuel.elastic4s.http.JavaClient
+import com.sksamuel.elastic4s.{ElasticClient, ElasticProperties}
 import com.twosixlabs.cdr4s.core.CdrDocument
 import com.twosixlabs.dart.exceptions.ExceptionImplicits.FutureExceptionLogging
 import com.twosixlabs.dart.search.test.TestObjectMother.CDR_TEMPLATE
-import com.twosixlabs.dart.test.TestUtils
 import com.twosixlabs.dart.test.base.StandardTestBase3x
 import org.scalatest.BeforeAndAfterAll
 
