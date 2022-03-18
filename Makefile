@@ -1,6 +1,6 @@
 IMAGE_PREFIX = twosixlabsdart
 IMAGE_NAME = dart-es
-IMG := $(IMAGE_PREFIX)\$(IMAGE_NAME)
+IMG := $(IMAGE_PREFIX)/$(IMAGE_NAME)
 
 ifndef GITHUB_REF_NAME
 	APP_VERSION := "latest"
