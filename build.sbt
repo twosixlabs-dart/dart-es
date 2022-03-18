@@ -44,31 +44,27 @@ lazy val commonSettings : Seq[ Def.Setting[ _ ] ] = {
         // `sbt wip:test` should run only tests tagged WipTest
         WipConfig / testOptions := Seq( Tests.Argument( "-n", "annotations.WipTest" ) ),
         setTestResourcesDir,
-        publishTo := {
-	    // TODO
-	    None
-        },
-        publishMavenStyle := true,
    )
 }
+
 lazy val disablePublish = Seq(
     skip.in( publish ) := true,
-    )
+)
 
 sonatypeProfileName := "com.twosixlabs"
-inThisBuild(List(
+inThisBuild( List(
     organization := "com.twosixlabs.dart.elasticsearch",
-    homepage := Some(url("https://github.com/twosixlabs-dart/dart-es")),
-    licenses := List("GNU-Affero-3.0" -> url("https://www.gnu.org/licenses/agpl-3.0.en.html")),
+    homepage := Some( url( "https://github.com/twosixlabs-dart/dart-es" ) ),
+    licenses := List( "GNU-Affero-3.0" -> url( "https://www.gnu.org/licenses/agpl-3.0.en.html" ) ),
     developers := List(
         Developer(
             "twosixlabs-dart",
             "Two Six Technologies",
             "",
-            url("https://github.com/twosixlabs-dart")
-            )
+            url( "https://github.com/twosixlabs-dart" )
         )
-    ))
+    )
+) )
 
 ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
 ThisBuild / sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
@@ -85,7 +81,7 @@ lazy val root = ( project in file( "." ) )
   .aggregate( esUtil, searchIndex, tenantIndex )
   .settings(
       name := "dart-es",
-      publish := {},
+      disablePublish,
    )
 
 lazy val esUtil = ( project in file( "es-util" ) )
