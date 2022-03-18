@@ -1,10 +1,10 @@
 package com.twosixlabs.dart.search
 
+import annotations.IntegrationTest
 import com.twosixlabs.cdr4s.annotations.{FacetScore, OffsetTag}
 import com.twosixlabs.cdr4s.core.{CdrAnnotation, FacetAnnotation, OffsetTagAnnotation}
 import com.twosixlabs.dart.search.test.EsTestBase
 import com.twosixlabs.dart.search.test.TestObjectMother.CDR_TEMPLATE
-import com.twosixlabs.dart.test.tags.annotations.{IntegrationTest, WipTest}
 
 import java.lang.Thread.sleep
 import java.util.concurrent.TimeUnit.SECONDS

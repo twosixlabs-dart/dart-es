@@ -7,9 +7,9 @@ object Dependencies {
 
     val betterFilesVersion = "3.8.0"
 
-    val cdr4sVersion = "3.0.232"
-    val dartCommonsVersion = "3.0.278"
-    val dartAuthVersion = "3.1.159"
+    val cdr4sVersion = "3.0.9"
+    val dartCommonsVersion = "3.0.30"
+    val dartAuthVersion = "3.1.11"
 
     val scalaTestVersion = "3.1.4"
     val scalaMockVersion = "4.2.0"

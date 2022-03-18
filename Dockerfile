@@ -1,4 +1,4 @@
-FROM ???
+FROM python:buster
 
 EXPOSE 9200
 EXPOSE 9300
@@ -21,7 +21,6 @@ RUN groupadd elasticsearch && \
     useradd -g elasticsearch elasticsearch && \
     usermod -a -G root elasticsearch
 
-# copy hbase and standalone config
 ADD es/distro/elasticsearch.tgz /tmp
 
 RUN mv /tmp/$ES_OSS /tmp/elasticsearch && \
